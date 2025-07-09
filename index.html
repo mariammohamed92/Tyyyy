@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<link rel="stylesheet" href="./src/output.css">
+  <title>Portfolio Mariam</title>
+  <link rel="shortcut icon" href="./img/Black White Minimalist Modern Initial Name Fashion Boutique Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css" />
+  <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body >
+<!-- <body class="transition duration-500 bg-white dark:bg-gray-900 text-gray-800 dark:text-white"> -->
+ <body>
+  
 
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<div class="min-h-screen">
+  <!-- Navbar -->
+  <nav class="  w-full">
+<div>
   <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
-  <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div class="w-full text-gray-700 bg-gradient-to-r from-pink-500 to-violet-500 dark-mode:text-gray-200 dark-mode:bg-gray-800">
     <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
       <div class="flex flex-row items-center justify-between p-4">
-        <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Flowtrail UI</a>
+        <a href="#" class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Mariam</a>
         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
             <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -24,70 +29,301 @@
         </button>
       </div>
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
-        <div @click.away="open = false" class="relative" x-data="{ open: true }">
-          <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-            <span>More</span>
-            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-          <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
-            <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
-                  <div class="bg-teal-500 text-white rounded-lg p-3">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                  </div>
-                  <div class="ml-3">
-                    <p class="font-semibold">Appearance</p>
-                    <p class="text-sm">Easy customization</p>
-                  </div>
-                </a>
-
-                <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
-                  <div class="bg-teal-500 text-white rounded-lg p-3">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                  </div>
-                  <div class="ml-3">
-                    <p class="font-semibold">Comments</p>
-                    <p class="text-sm">Check your latest comments</p>
-                  </div>
-                </a>
-
-                <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
-                  <div class="bg-teal-500 text-white rounded-lg p-3">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                  </div>
-                  <div class="ml-3">
-                    <p class="font-semibold">Analytics</p>
-                    <p class="text-sm">Take a look at your statistics</p>
-                  </div>
-                </a>
-              </div>
-            </div>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white" href="#Home">Home</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white" href="#About">About</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white" href="#services">Service</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white" href="#Work">Work</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white" href="#Contact">Contact</a>
+             <a>  <button id="modeToggle" class="text-lg">🌙</button></a>
+          <a class="text-white  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
+            <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+              <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+              <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
           </div>
-        </div>    
+   
+          </a>
+          
+
       </nav>
+
     </div>
   </div>
 </div>
   </div>
 
+</nav>
+<!-- Section 1 -->
+<section id="Home"  >
+  <div class="home ">
+    <div class="home1">
+      <div class="home2 home-data">
+      <h1 class="text-5xl mb-5">Iam Mariam Mohamed</h1>
+        <h2 class="text-4xl animate-float ">Iam <span class="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent"></span> </h2>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script src="./style.js"></script>
+<!-- Section 2 -->
+<section id="About" class="flex flex-wrap mt-10 overflow-hidden border-b-4 border-b-pink-600">
+  <!-- Col 1 -->
+   <div class="w-full md:w-1/2  mb-5">
+    <div class="relative w-3/4 ">
+      <img src="./img/testimonial-2.jpg" class="About_img rounded-full w-full h-full" alt="">
+      <span class="absolute top-0 left-0 w-full h-full border-l-8 border-r-8 border-pink-500 rounded-full animate-spin-slow"></span>
+    </div>
+  </div>
+  
+
+<!-- Col 2 -->
+  <div class="w-full md:w-1/2 About_data">
+    <h1 class="mt-10 mb-8 text-6xl text-center bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent">
+  About
+</h1>
+<p class=" px-5 text-lg md:text-xl font-medium text-gray-700 leading-relaxed">I am a front-end developer. I can build a complete website. I can take the UI/UX design and convert it to code and link it to the back-end as well.
+</p>
+
+<ul class=" mt-5 space-y-4 text-gray-800 text-base md:text-lg font-medium">
+  <li class="px-5"><strong class="text-2xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent">Name:</strong> Mariam Mohamed</li>
+  <li class="px-5"><strong class="text-2xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent">Email:</strong> romamohamed951@gmail.com</li>
+  <li class="px-5"><strong class="text-2xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent">Phone:</strong> +20 1014379377</li>
+</ul>
+<a href="./Mariam Mohamed Sayed .pdf" download class="mx-5 px-5  mt-5 inline-block  py-3 bg-linear-to-r from-pink-500 to-violet-500 text-white font-semibold
+ rounded-lg shadow-md transition   hover:bg-transparent hover:bg-linear-to-r hover:from-pink-500 hover:to-violet-500
+ hover:bg-clip-text hover:font-extrabold hover:text-transparent
+ ">
+  Download CV
+</a>
+  </div>
+</section>
 
 
 
+<!-- Sec 3 Service -->
+ <section id="services" class=" bg-white py-16 px-4">
+       <h1 class="mt-10 mb-8 text-6xl text-center bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">
+    Services
+  </h1>
+<div class="secrvies_data grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto ">
+<div class="  bg-linear-to-r from-pink-500 to-violet-500 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+        <img src="./img/841364 (1).png" class="w-12 h-12 mx-auto mb-4" alt="Web Design">
+        <h3 class="text-xl font-semibold mb-2 text-white">Web Design</h3>
+        <p class=" text-white">Modern, responsive designs using HTML, CSS, Tailwind CSS, and UX principles.</p>
+</div>
+<div class=" bg-linear-to-r from-pink-500 to-violet-500 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+        <img src="./img/1126012.png" class="w-12 h-12 mx-auto mb-4" alt="React">
+        <h3 class="text-xl font-semibold mb-2 text-white">React Development</h3>
+        <p class="text-white">Interactive apps built with React, Hooks, and component-based architecture.</p>
+
+</div>
+<div class=" bg-linear-to-r from-pink-500 to-violet-500 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+          <img src="./img/1183672.png" class="w-12 h-12 mx-auto mb-4" alt="Next.js">
+        <h3 class="text-xl font-semibold mb-2 text-white">Next.js Development</h3>
+        <p class="text-white">Building fullstack web and API routes using Next.js.</p>
+
+</div>
+<div class=" bg-linear-to-r from-pink-500 to-violet-500 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+          <img src="./img/888879.png" class="w-12 h-12 mx-auto mb-4" alt="Material UI">
+        <h3 class="text-xl font-semibold mb-2 text-white">Material UI</h3>
+        <p class="text-white">Crafting beautiful interfaces using the MUI component library for React apps.</p>
+
+</div>
+</div>
+ </section>
+
+ <!-- Sec 4 Work -->
+   <section id="Work" class=" bg-white py-16 px-4">
+       <h1 class="mt-10 mb-8 text-6xl text-center bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">
+    My Work
+  </h1>
+<div class="work_data grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto ">
+<div class="  bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+        <img src="./img/841364 (1).png" class="w-12 h-12 mx-auto mb-4" alt="Web Design">
+        <h3 class="text-xl font-semibold mb-2 ">Web Design</h3>
+        <p class=" text-gray-700 mb-5">Modern, responsive designs using HTML, CSS, Tailwind CSS, and UX principles.</p>
+ <a href="https://yourproject1-link.com" target="_blank" class="bg-gradient-to-r from-pink-500 to-violet-500 inline-block px-4 py-2  text-white rounded transition-colors duration-300">
+          View Project
+        </a>
+      </div>
+<div class=" bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+        <img src="./img/1126012.png" class="w-12 h-12 mx-auto mb-4" alt="React">
+        <h3 class="text-xl font-semibold mb-2 ">React Development</h3>
+        <p class="text-gray-700 mb-5">Interactive apps built with React, Hooks, and component-based architecture.</p>
+ <a href="https://yourproject1-link.com" target="_blank" class="bg-gradient-to-r from-pink-500 to-violet-500 inline-block px-4 py-2 b text-white rounded transition-colors duration-300">
+          View Project
+        </a>
+</div>
+<div class=" bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+          <img src="./img/1183672.png" class="w-12 h-12 mx-auto mb-4" alt="Next.js">
+        <h3 class="text-xl font-semibold mb-2 ">Next.js Development</h3>
+        <p class="text-gray-700 mb-5">Building fullstack web and API routes using Next.js.</p>
+ <a href="https://yourproject1-link.com" target="_blank" class="bg-gradient-to-r from-pink-500 to-violet-500 inline-block px-4 py-2 b text-white rounded transition-colors duration-300">
+          View Project
+        </a>
+</div>
+<div class=" bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-center">
+          <img src="./img/888879.png" class="w-12 h-12 mx-auto mb-4" alt="Material UI">
+        <h3 class="text-xl font-semibold mb-2 ">Material UI</h3>
+        <p class="text-gray-700 mb-5">Crafting beautiful interfaces using the MUI component library for React apps.</p>
+ <a href="https://yourproject1-link.com" target="_blank" class="bg-gradient-to-r from-pink-500 to-violet-500 inline-block px-4 py-2 b text-white rounded transition-colors duration-300">
+          View Project
+        </a>
+</div>
+</div>
+ </section>
 
 
 
+<!-- Section 5 -->
+<section id="Contact" class="flex flex-wrap mt-10 overflow-hidden">
+  <!-- Col 2 -->
+  <div class="w-full md:w-1/2  ">
+    <div class="relative w-3/4 ">
+      <img src="./img/contact.png" class="Contact_img mx-10 w-full" alt="">
+    </div>
+  </div>
 
+  <!-- Col 1 -->
+  <div class="w-full md:w-1/2 Contact_data">
+    <h1 class="mt-10 mb-8 text-6xl text-center bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent">
+  Contact
+</h1>
+<!-- component -->
+<div class="flex items-center justify-center p-12">
+  <!-- Author: FormBold Team -->
+  <div class="mx-auto w-full max-w-[550px]">
+    <form  id="contact-form">
+      <div class="mb-5">
+        <label
+          for="name"
+          class="mb-3 block text-base  
+          bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent
+          "
+          
+        >
+          Full Name
+        </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Full Name"
+          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="email"
+          class="mb-3 block text-base bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent"
+        >
+          Email Address
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@domain.com"
+          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="subject"
+          class="mb-3 block text-base bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent"
+        >
+          Subject
+        </label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Enter your subject"
+          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="message"
+          class="mb-3 block text-base bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text  font-extrabold text-transparent"
+        >
+          Message
+        </label>
+        <textarea
+          rows="4"
+          name="message"
+          id="message"
+          placeholder="Type your message"
+          class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        ></textarea>
+      </div>
+      <div>
+        <button
+          class="hover:shadow-form rounded-md bg-gradient-to-r from-pink-500 to-violet-500   py-3 px-8 text-base font-semibold text-white outline-none"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+ <div class="bg-gradient-to-r from-pink-500 to-violet-500 Footer py-10">
+<div class="max-w-2xl mx-auto ">
+
+	<footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+		<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline" target="_blank">Flowbite™</a>. All Rights Reserved.
+    </span>
+		<ul class="flex flex-wrap items-center mt-3 sm:mt-0">
+			<li>
+				<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">About</a>
+			</li>
+			<li>
+				<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Privacy
+					Policy</a>
+			</li>
+			<li>
+				<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Licensing</a>
+			</li>
+			<li>
+				<a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact</a>
+			</li>
+		</ul>
+	</footer>
+
+	<p class="mt-5">This footer component is part of a larger, open-source library of Tailwind CSS components. Learn
+		more
+		by going to the official <a class="text-blue-600 hover:underline"
+			href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite Documentation</a>.
+	</p>
+</div>
+</div>
+
+<a href="" class="fixed right-4 -bottom-1/2
+ bg-yellow-500 shadow-sm
+ px-3 py-1 md:px-4 md:py-2 rounded-md
+ text-lg inline-block z-50 
+ hover:translate-y-1 duration-300" 
+ id="scroll-up"
+ >
+  <span class="text-4xl">↑</span>
+</a>
+
+
+ <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="./scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.bundle.js"></script>
+  
+  <script src="./style.js"></script>
 
 </body>
-</html> 
-
+</html>  
 
 
 

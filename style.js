@@ -1,9 +1,37 @@
-document.querySelector('#toggle').addEventListener('change',function(){
-    document.querySelector('html').classList.toggle('dark')
-        
-    })
+  // تهيئة EmailJS
+  (function() {
+    emailjs.init("RhV5YAl2jkXAu2njT");   
+  })();
 
-// Scroll icon arrow
+  // التعامل مع الفورم
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+    emailjs.sendForm("service_ytsppnl", "template_joqcdg5", this)
+      .then(function(response) {
+        alert("تم إرسال الرسالة بنجاح ✅");
+        console.log("SUCCESS!", response.status, response.text);
+      }, function(error) {
+        alert("فيه خطأ أثناء الإرسال ❌");
+        console.log("FAILED...", error);
+      });
+  });
+
+              // Anmation All Websit
+
+            const sr = ScrollReveal({
+                origin:"top",
+                distance:"60px",
+                duration:2500,
+                delay:300,
+                reset:true
+
+            })
+            sr.reveal(`.home-data,.About_data,.secrvies_data,.work_data,.Contact_data,.Footer`);
+            sr.reveal(`.About_img,.Contact_img`,{delay:500,scale:0.5});
+
+
+            // Scroll icon arrow
     const scrollup=()=>{
 const scrollButton=document.getElementById('scroll-up')
 if (this.scrollY>=250) {
@@ -19,29 +47,22 @@ if (this.scrollY>=250) {
     window.addEventListener("scroll",scrollup)
 
 
-    // Scroll Navbar
-    const scrollheader=()=>{
-        const scrollButton=document.getElementById('Navbar')
-        if (this.scrollY>=50) {
-            scrollButton.classList.add("border-b","border-yello-500")
+    // Dark
+    document.querySelector('#toggle').addEventListener('change',function(){
+    document.querySelector('html').classList.toggle('dark')
         
-        }else{
-            scrollButton.classList.remove("border-b","border-yello-500")
-        }
-            }
-        
-            window.addEventListener("scroll",scrollheader)
+    })
 
+//   const toggle = document.querySelector('#toggle');
+//   const html = document.querySelector('html');
 
-            // Anmation All Websit
-
-            const sr = ScrollReveal({
-                origin:"top",
-                distance:"60px",
-                duration:2500,
-                delay:300,
-                reset:true
-
-            })
-            sr.reveal(`.home-data,.About_data,.Contact,.Footer`);
-            sr.reveal(`.home-img,.About_img,.card,.Slider,.Contact_img`,{delay:500,scale:0.5});
+//     tailwind.config = { darkMode: 'class' }
+// const toggleBtn = document.getElementById('toggleDark');
+//     toggleBtn.addEventListener('click', () => {
+//       document.documentElement.classList.toggle('dark');
+//       localStorage.setItem('theme',
+//         document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+//     });
+//     if (localStorage.getItem('theme') === 'dark') {
+//       document.documentElement.classList.add('dark');
+//     }
